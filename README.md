@@ -1,10 +1,12 @@
 # zhiang-personal
 
-个人工具与项目合集 / Personal tools and projects.
+**English** | [简体中文](readme-zh.md)
+
+A collection of personal tools and projects.
 
 ## Arch Icons
 
-[Arch Icons](arch-icons/) 是面向架构图的 SVG 图标管理工具，提供浏览、搜索、导入、审核、偏好设置和 Agent 查询接口。
+[Arch Icons](arch-icons/) is an SVG icon management tool for architecture diagrams. It provides browsing, search, import, review, preferences, and a query interface for AI agents.
 
 ```bash
 git clone https://github.com/zhiangzq126/zhiang-personal.git
@@ -12,28 +14,28 @@ cd zhiang-personal/arch-icons
 python3 scripts/iconlib.py serve --open
 ```
 
-Python 3.9+，日常使用无需额外 Python 包。详细说明见 [项目文档](arch-icons/README.md)，Agent 接入见 [统一调用规范](arch-icons/docs/agent-contract.md)。
+Requires Python 3.9+. No additional Python packages are needed for everyday use. See the [project documentation](arch-icons/README.md) for details and the [agent contract](arch-icons/docs/agent-contract.md) (Chinese) for agent integration.
 
 ## RedisShake Migration
 
-[RedisShake Migration](redis-shake-migration/) 是一个端到端管理 RedisShake 数据迁移任务的 Agent 技能：从 Excel 表格、文本描述或逐项问答中提取迁移信息，生成 `shake.toml` 配置，并在本地或通过 SSH 远程部署、启动、停止、监控迁移任务。
+[RedisShake Migration](redis-shake-migration/) is an agent skill for end-to-end management of RedisShake migration tasks. It extracts migration details from Excel spreadsheets, text descriptions, or guided questions, generates `shake.toml` configuration files, and deploys, starts, stops, and monitors tasks locally or remotely over SSH.
 
-适用于 Redis 迁移/同步任务的配置与运维；不涉及 MongoDB/MySQL/ES 等非 Redis 迁移，也不做迁移后数据一致性校验（建议配合 redis-full-check）。需在已部署 redis-shake 二进制的 Linux 服务器上运行，Agent 端需支持 Bash/Shell 工具。
+It covers configuration and operations for Redis migration and synchronization, not migrations involving MongoDB, MySQL, Elasticsearch, or other non-Redis databases. It does not validate post-migration data consistency; use redis-full-check for that purpose. Tasks run on Linux servers where the redis-shake binary is already installed, and the agent platform must support Bash/shell tools.
 
-详细说明见 [SKILL.md](redis-shake-migration/SKILL.md)。
+See [SKILL.md](redis-shake-migration/SKILL.md) for details.
 
 ## Mail Invoice Collector
 
-[Mail Invoice Collector](mail-invoice-collector/) 是从邮箱自动收集报销发票并汇总到 Excel 的 Agent 技能（纯 Python）：扫描 IMAP 指定文件夹，下载 PDF 附件票与正文链接票（含诺诺/百望 SPA、51 发票中间页、税局直下链接），解析发票号/金额/购销方/日期，按发票号去重后增量追加进一张汇总表。全流程一条命令，OCR 兜底可选。
+[Mail Invoice Collector](mail-invoice-collector/) is a pure-Python agent skill that collects reimbursement invoices from email and summarizes them in Excel. It scans a configured IMAP folder, downloads PDF attachments and invoices linked in email bodies—including Nuonuo/Baiwang single-page applications, 51 Invoice intermediary pages, and direct tax-authority download links—and extracts invoice numbers, amounts, buyers, sellers, and dates. Results are appended incrementally to one summary workbook, deduplicated by invoice number. The full workflow runs with one command; OCR fallback is optional.
 
-使用前将 `.env.example`、`config.example.yaml` 复制为本地 `.env` / `config.yaml` 并填入邮箱授权码（不会被提交）。详细说明见 [SKILL.md](mail-invoice-collector/SKILL.md)。
+Before use, copy `.env.example` and `config.example.yaml` to local `.env` and `config.yaml` files and supply the mailbox authorization code in `.env`, which is excluded from Git. See [SKILL.md](mail-invoice-collector/SKILL.md) (Chinese) for details.
 
 ## Mail Invoice Pipeline
 
-[Mail Invoice Pipeline](mail-invoice-pipeline/) 是邮箱取票的端到端链路（Node.js + Python）：下载邮件附件票、提取并下载正文链接票（含 51 发票中间页解析）、用浏览器自动化下载诺诺/百望等 SPA 开票平台发票、扫描件走百度 OCR 兜底，字段校验与号码去重后输出报销汇总表 xlsx。功能更全，分步脚本执行。
+[Mail Invoice Pipeline](mail-invoice-pipeline/) is an end-to-end email invoice workflow built with Node.js and Python. It downloads attachments, retrieves invoices from links in email bodies (including 51 Invoice intermediary pages), automates browser downloads from Nuonuo/Baiwang and similar single-page applications, and uses Baidu OCR as a fallback for scanned invoices. Field validation and invoice-number deduplication produce an XLSX reimbursement summary. It offers a more comprehensive, step-by-step workflow through separate scripts.
 
-使用前将 `config.example.yaml`、`ocr-config.example.json` 复制为本地 `config.yaml` / `ocr-config.json` 并填入凭据（已在 `.gitignore` 中，不会被提交）；OCR 不配置则自动关闭。详细说明见 [SKILL.md](mail-invoice-pipeline/SKILL.md)。
+Before use, copy `config.example.yaml` and `ocr-config.example.json` to local `config.yaml` and `ocr-config.json` files and fill in your credentials. These local files are excluded by `.gitignore` and must not be committed. OCR is automatically disabled when it is not configured. See [SKILL.md](mail-invoice-pipeline/SKILL.md) (Chinese) for details.
 
-## 许可
+## Licensing
 
-各项目独立声明许可，见 [LICENSES.md](LICENSES.md)。Arch Icons 原创工具代码采用 MIT；第三方图标、商标与上游材料不因代码许可证而获得额外授权。
+Licenses are declared separately for each project; see [LICENSES.md](LICENSES.md). Original Arch Icons tool code is MIT-licensed. The code license does not grant additional rights to third-party icons, trademarks, or upstream materials.

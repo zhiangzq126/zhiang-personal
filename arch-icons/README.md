@@ -1,10 +1,12 @@
 # Arch Icons
 
-面向架构图的 SVG 图标管理工具，支持多厂商素材、可视化浏览与导入审核、共享图标偏好，以及供 Agent 使用的确定性查询接口。
+**English** | [简体中文](readme-zh.md)
 
-## 快速开始
+An SVG icon management tool for architecture diagrams, supporting assets from multiple vendors, visual browsing and import review, shared icon preferences, and a deterministic query interface for Agents.
 
-需要 Python 3.9+；日常运行不需要第三方 Python 包。
+## Quick Start
+
+Requires Python 3.9+; no third-party Python packages are needed for everyday use.
 
 ```bash
 git clone https://github.com/zhiangzq126/zhiang-personal.git
@@ -12,15 +14,15 @@ cd zhiang-personal/arch-icons
 python3 scripts/iconlib.py serve --open
 ```
 
-服务仅监听本机 `127.0.0.1`，终端会打印实际地址；Ctrl+C 停止。macOS 也可双击 `打开图标库.command`。直接打开 `previews/index.html` 可以离线浏览和下载；导入、审核与保存偏好需要本地服务。离线页复制的 CLI 命令应在本项目根目录执行。
+The service listens only on the local address `127.0.0.1` and prints its actual URL in the terminal; press Ctrl+C to stop it. On macOS, you can also double-click `打开图标库.command` (Open Icon Library). Open `previews/index.html` directly for offline browsing and downloads; importing, reviewing, and saving preferences require the local service. Run CLI commands copied from the offline page in this project's root directory.
 
-## 本次发布收录
+## Included in This Release
 
-包含完整的活动索引：**1,969 个语义条目、2,414 个变体、2,404 份唯一 SVG**，覆盖阿里云、AWS、腾讯云、华为云及开源/通用组件。数量包括产品、资源、品牌和通用符号，不等于独立云产品数量。
+The complete active index contains **1,969 semantic entries, 2,414 variants, and 2,404 unique SVGs**, covering Alibaba Cloud, AWS, Tencent Cloud, Huawei Cloud, and open-source/general-purpose components. These counts include products, resources, brands, and generic symbols, and do not represent the number of distinct cloud products.
 
-原始来源可追溯，待审核项保留其状态且不会自动选择。素材来源与许可说明见 [第三方声明](THIRD_PARTY_NOTICES.md)，发布范围见 [清单](catalog/release-manifest.json)。
+Original sources are traceable, and items pending review retain their status and are not selected automatically. See [Third-Party Notices](THIRD_PARTY_NOTICES.md) for asset sources and licensing details, and the [manifest](catalog/release-manifest.json) for the release scope.
 
-## Agent 查询
+## Agent Queries
 
 ```bash
 python3 scripts/iconlib.py search "对象存储" --json
@@ -29,11 +31,11 @@ python3 scripts/iconlib.py resolve "ES" --json
 python3 scripts/iconlib.py show "aliyun/ecs" --json
 ```
 
-CLI 契约版本为 2。`search` 发现候选，`resolve` 决定最终素材；只有退出码 0 且 `status: resolved` 时可使用 SVG。没有素材、只有厂商版本、歧义、待审核等情况分别返回原因和 `fallback: card`。素材是否可用取决于当前目录中实际收录和审核的条目。
+The CLI contract version is 2. `search` discovers candidates, while `resolve` selects the final asset; use an SVG only when the exit code is 0 and `status: resolved`. Cases such as no available asset, vendor-only variants, ambiguity, or pending review return their respective reasons and `fallback: card`. Asset availability depends on the entries actually included and reviewed in the current catalog.
 
-未注明厂商时优先独立组件；独立组件不存在时，可依据 `catalog/component-mappings.json` 明确配置的关联复用阿里云 SVG。使用 `display_name` 或用户原标签，不能把素材来源厂商当作部署厂商。显式厂商或精确产品 ID 优先于该复用规则。
+When no vendor is specified, independent components take priority. If no independent component exists, an Alibaba Cloud SVG may be reused through an explicitly configured association in `catalog/component-mappings.json`. Use `display_name` or the user's original label; do not treat the asset's source vendor as the deployment vendor. An explicit vendor or exact product ID takes precedence over this reuse rule.
 
-变体选择顺序为本次 `--variant`、共享个人偏好、索引默认值。临时选择不修改全局偏好。
+Variants are selected in this order: `--variant` for the current invocation, shared personal preferences, then the index default. A temporary selection does not modify global preferences.
 
 ```bash
 python3 scripts/iconlib.py resolve <product-id> --variant <variant-id> --json
@@ -41,27 +43,27 @@ python3 scripts/iconlib.py prefer <product-id> <variant-id>
 python3 scripts/iconlib.py prefer <product-id> --reset
 ```
 
-完整接口见 [调用规范](docs/agent-contract.md)、[响应 schema](docs/schemas/agent-response.schema.json)、[SVG 消费示例](examples/agent/consume_icon.py)。生成的图表应嵌入 SVG，不依赖原机器的路径或服务。
+See the [Agent contract](docs/agent-contract.md), [response schema](docs/schemas/agent-response.schema.json), and [SVG consumption example](examples/agent/consume_icon.py) for the full interface. Generated diagrams should embed SVGs rather than depend on paths or services on the original machine.
 
-## 技能接入
+## Skill Integration
 
-公共技能在 [skills/arch-icons](skills/arch-icons/SKILL.md)。将其加入 Agent 的技能目录，并设置：
+The shared skill is in [skills/arch-icons](skills/arch-icons/SKILL.md). Add it to your Agent's skill directory and set:
 
 ```bash
 export ARCH_ICONS_ROOT="/absolute/path/to/zhiang-personal/arch-icons"
 ```
 
-未设置时，项目内技能会自动定位根目录。`ICON_PERSONAL_ROOT` 和旧技能名 `icon-personal` 为兼容入口，新变量优先。普通绘图只读图标库。
+If this variable is not set, the skill within the project automatically locates the root directory. `ICON_PERSONAL_ROOT` and the old skill name `icon-personal` remain compatibility entry points; the new variable takes precedence. Ordinary diagram generation accesses the icon library in read-only mode.
 
-本项目提供素材选择和消费契约；archify、ai-drawio 等工具仍需各自适配布局、嵌入和导出，不会因为安装本技能而自动获得新的渲染能力。
+This project provides asset selection and a consumption contract. Tools such as archify and ai-drawio still need their own adaptations for layout, embedding, and export; installing this skill does not automatically give them new rendering capabilities.
 
-## 导入与审核
+## Import and Review
 
-在浏览页点击“导入 SVG”，可批量填写名称、厂商、别名和来源。系统检查完全相同的 SVG 以及名称冲突，可关联已有产品、保留独立条目或跳过。默认值只在明确选择时修改。
+Click “导入 SVG” (Import SVG) in the browser viewer to enter names, vendors, aliases, and sources in bulk. The system checks for identical SVGs and name conflicts; you can associate an asset with an existing product, keep it as a separate entry, or skip it. Defaults change only when explicitly selected.
 
-点击“待确认审核”可集中查看素材、修改元信息、启用选定变体或将有误变体移入回收站。原始素材及来源记录保留，清理不会移除被其他条目共用的 SVG。
+Click “待确认审核” (Review Pending Items) to review assets in one place, edit metadata, enable selected variants, or move incorrect variants to the recycle bin. Original assets and source records are preserved, and cleanup does not remove SVGs shared by other entries.
 
-命令行也支持独立 SVG 和含内嵌 SVG 的 DrawIO mxlibrary：
+The command line also supports standalone SVGs and DrawIO mxlibrary files containing embedded SVGs:
 
 ```bash
 python3 scripts/iconlib.py import /path/to/icons --provider example --source-name my-pack --json
@@ -69,21 +71,21 @@ python3 scripts/iconlib.py search "name" --include-pending --json
 python3 scripts/iconlib.py review <product-id> --status ready --name "Verified name" --note "Identity verified"
 ```
 
-CLI `review` 面向整个产品及其变体；逐项审核使用浏览页。位图可归档，但不会包装成 SVG 冒充矢量。仅导入有权使用的素材；审核 ready 代表本地身份确认，不代表官方最新版本或授权认证。
+CLI `review` applies to an entire product and its variants; use the browser viewer for item-by-item review. Raster images can be archived, but are not wrapped in SVG to pass them off as vectors. Import only assets you have the right to use; a `ready` review status means the identity has been confirmed locally, not that the asset is the latest official version or that its authorization has been certified.
 
-## 目录
+## Directory Structure
 
-- `assets/`：按 SHA-256 存储的 SVG；日常消费的素材出口。
-- `catalog/`：产品、变体、别名、组件映射、偏好与数据 schema。
-- `sources/`：素材原件及来源证据；不能随意修改或删除。
-- `scripts/`：查询、导入审核、本地服务和预览构建。
-- `previews/`：静态浏览页。
-- `skills/`：当前技能与旧名称兼容入口。
-- `docs/`、`examples/`、`tests/`：接入规范、调用示例及验证。
+- `assets/`: SVGs stored by SHA-256; the asset source for everyday consumption.
+- `catalog/`: Products, variants, aliases, component mappings, preferences, and data schemas.
+- `sources/`: Original assets and source evidence; do not modify or delete them arbitrarily.
+- `scripts/`: Queries, import and review, the local service, and preview building.
+- `previews/`: The static browser viewer.
+- `skills/`: The current skill and the compatibility entry point under its old name.
+- `docs/`, `examples/`, `tests/`: Integration specifications, usage examples, and validation.
 
-发布副本不包含维护者个人偏好、旧回收站、历史报告或一次性的本机初始化脚本。运行产生的 reports/trash 由 Git 忽略。
+The release copy does not include the maintainer's personal preferences, old recycle-bin contents, historical reports, or one-off local initialization scripts. Runtime-generated reports/trash are ignored by Git.
 
-## 验证与开发
+## Validation and Development
 
 ```bash
 python3 scripts/iconlib.py validate --json
@@ -91,8 +93,8 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 python3 scripts/build_preview.py
 ```
 
-可选浏览器测试使用 Playwright。通过 `PLAYWRIGHT_MODULE` 指定其模块路径，`CHROME_PATH` 可指定本机浏览器，`ICON_PREVIEW_URL` 指定运行中的服务地址；未提供浏览器路径时使用 Playwright 的 Chromium。
+Optional browser tests use Playwright. Set `PLAYWRIGHT_MODULE` to its module path, `CHROME_PATH` to a local browser path if desired, and `ICON_PREVIEW_URL` to the running service URL. When no browser path is provided, Playwright's Chromium is used.
 
-## 许可
+## License
 
-原创工具代码、测试、技能说明及原创文档采用 [MIT](LICENSE)。第三方图标、上游素材和商标不受本项目 MIT 授权覆盖；素材副本及嵌入数据同样遵循原许可。见 [第三方声明](THIRD_PARTY_NOTICES.md)。
+Original tool code, tests, skill instructions, and original documentation are licensed under [MIT](LICENSE). Third-party icons, upstream assets, and trademarks are not covered by this project's MIT license; asset copies and embedded data remain subject to their original licenses. See [Third-Party Notices](THIRD_PARTY_NOTICES.md).
