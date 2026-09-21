@@ -1,0 +1,30 @@
+{
+  "contract_version": 2,
+  "status": "resolved",
+  "product_id": "aliyun/elasticsearch",
+  "name": "Alibaba Cloud Elasticsearch",
+  "provider": "aliyun",
+  "variant_id": "aliyun/elasticsearch@orange-glyph-6207e6039d",
+  "style": "orange-glyph",
+  "asset_path": "/path/to/arch-icons/assets/62/6207e6039dd635d5ed20c3c983ba40c1a546be839b6ef455b9be413eed2deea6.svg",
+  "asset_relative_path": "assets/62/6207e6039dd635d5ed20c3c983ba40c1a546be839b6ef455b9be413eed2deea6.svg",
+  "sha256": "6207e6039dd635d5ed20c3c983ba40c1a546be839b6ef455b9be413eed2deea6",
+  "representation": "vector",
+  "theme": {
+    "preserve_colors": true,
+    "dark_backdrop": false
+  },
+  "kind": "product",
+  "selection": "catalog_default",
+  "display_name": "Elasticsearch",
+  "match_type": "vendor_svg_reuse",
+  "requested_component": {
+    "id": "opensource/elasticsearch",
+    "name": "Elasticsearch"
+  },
+  "diagnostic": {
+    "code": "vendor_svg_reuse",
+    "message": "缺少独立组件图标，已复用阿里云 Alibaba Cloud Elasticsearch 的 SVG；节点仍表示 Elasticsearch，不表示部署在阿里云。",
+    "action": "保留用户原标签或使用 display_name；product_id/name/provider 是素材所属产品，不改变节点部署语义。"
+  }
+}

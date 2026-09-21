@@ -1,0 +1,26 @@
+{
+  "contract_version": 2,
+  "status": "resolved",
+  "product_id": "tencent/cos",
+  "name": "腾讯云对象存储 COS",
+  "provider": "tencent",
+  "variant_id": "tencent/cos@download-glyph-69137c720f",
+  "style": "download-glyph",
+  "asset_path": "/path/to/arch-icons/assets/69/69137c720f95625372559fa464d91423fb66940cb663478a9d44aa2cbc0b7caa.svg",
+  "asset_relative_path": "assets/69/69137c720f95625372559fa464d91423fb66940cb663478a9d44aa2cbc0b7caa.svg",
+  "sha256": "69137c720f95625372559fa464d91423fb66940cb663478a9d44aa2cbc0b7caa",
+  "representation": "vector",
+  "theme": {
+    "preserve_colors": true,
+    "dark_backdrop": true
+  },
+  "kind": "product",
+  "selection": "catalog_default",
+  "display_name": "腾讯云对象存储 COS",
+  "match_type": "exact_product",
+  "diagnostic": {
+    "code": "exact_product",
+    "message": "已找到可用图标。",
+    "action": "保留用户原标签或使用 display_name；product_id/name/provider 是素材所属产品，不改变节点部署语义。"
+  }
+}

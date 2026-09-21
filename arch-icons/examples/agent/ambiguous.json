@@ -1,0 +1,30 @@
+{
+  "contract_version": 2,
+  "status": "ambiguous",
+  "fallback": "card",
+  "candidates": [
+    {
+      "id": "aliyun/ecs",
+      "name": "云服务器 ECS",
+      "provider": "aliyun",
+      "status": "ready"
+    },
+    {
+      "id": "aws/ecs",
+      "name": "Elastic Container Service",
+      "provider": "aws",
+      "status": "ready"
+    },
+    {
+      "id": "huawei/pack-elastic-cloud-server-ecs-a35fc51098",
+      "name": "Elastic Cloud Server (ECS)",
+      "provider": "huawei",
+      "status": "ready"
+    }
+  ],
+  "diagnostic": {
+    "code": "ambiguous",
+    "message": "存在歧义：匹配到多个产品身份。",
+    "action": "确认产品或厂商后再次解析。"
+  }
+}

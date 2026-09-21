@@ -1,0 +1,291 @@
+[
+  {
+    "product_id": "aws/backup_backup_restore",
+    "name": "backup backup restore",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/backup_backup_restore@glyph-d9a2290096"
+    ]
+  },
+  {
+    "product_id": "aws/cloud_map_resource",
+    "name": "cloud map resource",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/cloud_map_resource@glyph-6b0d015fc9"
+    ]
+  },
+  {
+    "product_id": "aws/corporate_data_center2",
+    "name": "corporate data center2",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/corporate_data_center2@glyph-23e83295f5"
+    ]
+  },
+  {
+    "product_id": "aws/custom_event_bus_resource",
+    "name": "custom event bus resource",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/custom_event_bus_resource@glyph-41c1259a2e"
+    ]
+  },
+  {
+    "product_id": "aws/default_event_bus_resource",
+    "name": "default event bus resource",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/default_event_bus_resource@glyph-d2fea8c720"
+    ]
+  },
+  {
+    "product_id": "aws/ec2_instance_contents",
+    "name": "ec2 instance contents",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/ec2_instance_contents@glyph-fe8912fba9"
+    ]
+  },
+  {
+    "product_id": "aws/elastic_file_system_one_zone_standard",
+    "name": "elastic file system one zone standard",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/elastic_file_system_one_zone_standard@glyph-276d87182d"
+    ]
+  },
+  {
+    "product_id": "aws/elastic_file_system_standard_infrequent_access",
+    "name": "elastic file system standard infrequent access",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/elastic_file_system_standard_infrequent_access@glyph-a60ffd93ae"
+    ]
+  },
+  {
+    "product_id": "aws/elastic_inference",
+    "name": "elastic inference",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/elastic_inference@glyph-333212f64c"
+    ]
+  },
+  {
+    "product_id": "aws/game_tech",
+    "name": "game tech",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/game_tech@glyph-10c73341b6"
+    ]
+  },
+  {
+    "product_id": "aws/game_tech2",
+    "name": "game tech2",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/game_tech2@glyph-b375f530b3"
+    ]
+  },
+  {
+    "product_id": "aws/iot_analytics_dataset",
+    "name": "iot analytics dataset",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/iot_analytics_dataset@glyph-ba325f7519"
+    ]
+  },
+  {
+    "product_id": "aws/iot_device_defender_iot_device_jobs",
+    "name": "iot device defender iot device jobs",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/iot_device_defender_iot_device_jobs@glyph-17e30b1315"
+    ]
+  },
+  {
+    "product_id": "aws/m5n",
+    "name": "m5n",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/m5n@glyph-0beabbd72f"
+    ]
+  },
+  {
+    "product_id": "aws/open_3d_engine",
+    "name": "open 3d engine",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/open_3d_engine@glyph-78a89ad637"
+    ]
+  },
+  {
+    "product_id": "aws/r5n",
+    "name": "r5n",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/r5n@glyph-837af0045a"
+    ]
+  },
+  {
+    "product_id": "aws/s3_replication_time_control",
+    "name": "s3 replication time control",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/s3_replication_time_control@glyph-ea6c911562"
+    ]
+  },
+  {
+    "product_id": "aws/saas_event_bus_resource",
+    "name": "saas event bus resource",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/saas_event_bus_resource@glyph-a52346e2cb"
+    ]
+  },
+  {
+    "product_id": "aws/well_architected_tool",
+    "name": "well architected tool",
+    "notes": [
+      "未匹配到 DrawIO 侧栏名称，仅保留 stencil 名称。"
+    ],
+    "pending_variant_ids": [
+      "aws/well_architected_tool@glyph-f38c99b720"
+    ]
+  },
+  {
+    "product_id": "tencent/pack-unnamed-af2974e654",
+    "name": "设备安全",
+    "notes": [
+      "来自用户明确指定厂商的图标包；身份依据为原始文件名或 DrawIO 库标签，不代表已核实为当前官方品牌版本。",
+      "待确认：已修复原素材失效遮罩引用，请确认外观。"
+    ],
+    "pending_variant_ids": [
+      "tencent/pack-unnamed-af2974e654@blue-primary-c1eebc0380c5"
+    ]
+  },
+  {
+    "product_id": "huawei/pack-image-6105d6cc76",
+    "name": "Image",
+    "notes": [
+      "来自用户明确指定厂商的图标包；身份依据为原始文件名或 DrawIO 库标签，不代表已核实为当前官方品牌版本。",
+      "待确认：来源标签存在拼写、废弃标记或产品身份歧义，请核对后启用。"
+    ],
+    "pending_variant_ids": [
+      "huawei/pack-image-6105d6cc76@color-tile-21047381e274"
+    ]
+  },
+  {
+    "product_id": "huawei/pack-fgpa-accelerated-cloud-server-facs-5303820e97",
+    "name": "FGPA Accelerated Cloud Server (FACS)",
+    "notes": [
+      "来自用户明确指定厂商的图标包；身份依据为原始文件名或 DrawIO 库标签，不代表已核实为当前官方品牌版本。",
+      "待确认：来源标签存在拼写、废弃标记或产品身份歧义，请核对后启用。"
+    ],
+    "pending_variant_ids": [
+      "huawei/pack-fgpa-accelerated-cloud-server-facs-5303820e97@color-tile-7ee2810cfe1e"
+    ]
+  },
+  {
+    "product_id": "huawei/pack-log-tank-servce-lts-93d4954f9d",
+    "name": "Log Tank Servce (LTS)",
+    "notes": [
+      "来自用户明确指定厂商的图标包；身份依据为原始文件名或 DrawIO 库标签，不代表已核实为当前官方品牌版本。",
+      "待确认：来源标签存在拼写、废弃标记或产品身份歧义，请核对后启用。"
+    ],
+    "pending_variant_ids": [
+      "huawei/pack-log-tank-servce-lts-93d4954f9d@color-tile-8d3375836940"
+    ]
+  },
+  {
+    "product_id": "huawei/pack-memcached-deprecated-33945f667e",
+    "name": "Memcached (deprecated)",
+    "notes": [
+      "来自用户明确指定厂商的图标包；身份依据为原始文件名或 DrawIO 库标签，不代表已核实为当前官方品牌版本。",
+      "待确认：来源标签存在拼写、废弃标记或产品身份歧义，请核对后启用。"
+    ],
+    "pending_variant_ids": [
+      "huawei/pack-memcached-deprecated-33945f667e@color-tile-017879dc370f"
+    ]
+  },
+  {
+    "product_id": "huawei/pack-advanced-anti-ddos-aad-deprecated-f602ff6883",
+    "name": "Advanced Anti-DDoS (AAD) (deprecated)",
+    "notes": [
+      "来自用户明确指定厂商的图标包；身份依据为原始文件名或 DrawIO 库标签，不代表已核实为当前官方品牌版本。",
+      "待确认：来源标签存在拼写、废弃标记或产品身份歧义，请核对后启用。"
+    ],
+    "pending_variant_ids": [
+      "huawei/pack-advanced-anti-ddos-aad-deprecated-f602ff6883@color-tile-80fce1cdded8"
+    ]
+  },
+  {
+    "product_id": "huawei/pack-data-encryption-worshop-dew-c4c108aa56",
+    "name": "Data Encryption Worshop (DEW)",
+    "notes": [
+      "来自用户明确指定厂商的图标包；身份依据为原始文件名或 DrawIO 库标签，不代表已核实为当前官方品牌版本。",
+      "待确认：来源标签存在拼写、废弃标记或产品身份歧义，请核对后启用。"
+    ],
+    "pending_variant_ids": [
+      "huawei/pack-data-encryption-worshop-dew-c4c108aa56@color-tile-f89634ec8c0e"
+    ]
+  },
+  {
+    "product_id": "huawei/pack-cloud-server-backup-service-csbs-deprecated-9100cf9dd0",
+    "name": "Cloud Server Backup Service (CSBS) (deprecated)",
+    "notes": [
+      "来自用户明确指定厂商的图标包；身份依据为原始文件名或 DrawIO 库标签，不代表已核实为当前官方品牌版本。",
+      "待确认：来源标签存在拼写、废弃标记或产品身份歧义，请核对后启用。"
+    ],
+    "pending_variant_ids": [
+      "huawei/pack-cloud-server-backup-service-csbs-deprecated-9100cf9dd0@color-tile-aad1e84cb949"
+    ]
+  },
+  {
+    "product_id": "huawei/pack-volume-backup-service-vbs-deprecated-927f76eaf4",
+    "name": "Volume Backup Service (VBS) (deprecated)",
+    "notes": [
+      "来自用户明确指定厂商的图标包；身份依据为原始文件名或 DrawIO 库标签，不代表已核实为当前官方品牌版本。",
+      "待确认：来源标签存在拼写、废弃标记或产品身份歧义，请核对后启用。"
+    ],
+    "pending_variant_ids": [
+      "huawei/pack-volume-backup-service-vbs-deprecated-927f76eaf4@color-tile-09ac1ae996e4"
+    ]
+  }
+]

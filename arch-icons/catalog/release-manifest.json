@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "release_scope": "Full active icon catalog with referenced source assets",
+  "products": 1969,
+  "variants": 2414,
+  "unique_svg_assets": 2404,
+  "providers": {
+    "aliyun": 269,
+    "aws": 1002,
+    "generic": 4,
+    "huawei": 255,
+    "opensource": 12,
+    "status": 2,
+    "tencent": 425
+  },
+  "code_license": "MIT",
+  "third_party_assets": "Original terms apply; see THIRD_PARTY_NOTICES.md",
+  "privacy": "No maintainer preferences, workstation paths, personal review comments, historical reports, credentials or recycle-bin content are included."
+}

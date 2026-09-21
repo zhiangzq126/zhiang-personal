@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.env
+.env.*
+!.env.example
+arch-icons/reports/
+arch-icons/trash/
+arch-icons/exports/
+/UPLOAD.md
