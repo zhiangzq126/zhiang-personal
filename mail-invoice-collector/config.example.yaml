@@ -1,0 +1,33 @@
+# 报销发票收集器配置
+# 密码请写在同目录 .env 里，不要写在这个文件
+
+mailboxes:
+  - name: 我的QQ邮箱
+    provider: qq              # qq | 163 | 126 | gmail | outlook | custom
+    email: your_name@qq.com
+    password_env: IMAP_PASSWORD      # 对应 .env 中的变量名
+    folder: 其他文件夹/发票    # 存放报销邮件的文件夹名（先用 python run.py folders 查真实名字）
+    host: null                # provider=custom 时填写
+    port: 993
+
+output:
+  excel: data/invoices.xlsx
+  pdf_dir: data/pdf
+
+fetch:
+  # 正文链接命中这些关键词才尝试下载（链接文本或 URL 里包含即可）
+  link_keywords: [发票, 下载, 开票, invoice, fapiao, receipt, bill, pdf, ofd]
+  # 明确排除的链接
+  link_exclude: [unsubscribe, 退订, "mailto:", "javascript:", weibo.com, .jpg, .png, .gif, ofd_read]
+  http_timeout: 30
+  browser_timeout: 60         # 秒，headed 浏览器等你手动过验证码的时间
+  use_browser: true
+  # auto=优先本机 Chrome，其次 Edge，最后 Playwright 内置 Chromium
+  browser_channel: auto       # auto | chrome | msedge | chromium
+
+ocr:
+  # 无文本层/字段残缺时的 OCR 兜底（可选）。复用 mail-invoice-pipeline 技能里的
+  # baidu_ocr 模块与其 ocr-config.json，本项目不存放密钥。
+  # 需要时把 enabled 改成 true，scripts_dir 指向 baidu_ocr.py 所在目录。
+  enabled: false
+  scripts_dir: <baidu_ocr.py 所在目录，例如 ~/.qoderwork/skills/mail-invoice-pipeline/scripts>

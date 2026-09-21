@@ -1,0 +1,11 @@
+imap-tools>=1.5
+pdfplumber>=0.11
+openpyxl>=3.1
+requests>=2.31
+beautifulsoup4>=4.12
+PyYAML>=6.0
+playwright>=1.40
+
+# 可选：二维码兜底解析（装不上不影响主流程）
+# PyMuPDF>=1.24
+# zxing-cpp>=2.2

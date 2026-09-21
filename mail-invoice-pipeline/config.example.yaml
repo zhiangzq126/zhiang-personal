@@ -1,0 +1,35 @@
+# ============================================================
+# mail-invoice-pipeline 技能的邮箱账户配置模板
+# 使用方法：复制本文件为同目录下的 config.yaml，填入真实邮箱与授权码。
+# 注意：config.yaml 含凭据，切勿提交仓库、切勿随技能包分发。
+# ============================================================
+
+# 发票邮件所在文件夹（可选）。
+# QQ 邮箱会把发票类邮件自动归类到「其他文件夹/发票」。
+# 打开失败时脚本会自动发现名称含「发票/invoice」的文件夹，仍找不到则回退 INBOX。
+invoiceFolder: "其他文件夹/发票"
+
+# 默认使用的账户 id（对应 mailAccounts[].id）；环境变量 MAIL_ACCOUNT 可临时覆盖。
+defaultAccount: qq-mail
+
+mailAccounts:
+  - id: qq-mail                      # 账户标识，任意唯一字符串
+    displayName: QQ邮箱              # 仅用于展示，可省略
+    imap:                            # 收件（IMAP）——本技能只用到这部分
+      host: imap.qq.com              # IMAP 服务器地址
+      port: 993                      # IMAP 端口，993 = TLS
+      useTLS: true                   # 是否启用 TLS（993 端口必须 true）
+    smtp:                            # 发件（本技能主流程不使用，预留字段）
+      host: smtp.qq.com
+      port: 465
+      useTLS: true
+    auth:
+      username: "youremail@qq.com"   # 邮箱地址（登录账号）
+      password: "此处填IMAP授权码"    # 邮箱后台生成的「授权码」（应用专用密码），不是登录密码
+
+# 其他邮箱常见参数（供参考，按需增删账户）：
+#   网易 163：imap.163.com / 993 / TLS，授权码在「设置→POP3/SMTP/IMAP」开启并生成
+#   网易 126：imap.126.com / 993 / TLS
+#   Outlook：outlook.office365.com / 993 / TLS（可能需应用密码）
+#   Gmail：  imap.gmail.com / 993 / TLS（需两步验证 + 应用专用密码）
+#   阿里企业邮箱：imap.qiye.aliyun.com / 993 / TLS

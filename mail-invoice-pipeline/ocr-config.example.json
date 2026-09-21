@@ -1,0 +1,8 @@
+{
+  "provider": "baidu",
+  "api_key": "百度智能云应用的 API Key",
+  "secret_key": "百度智能云应用的 Secret Key",
+  "token_url": "https://aip.baidubce.com/oauth/2.0/token",
+  "vat_invoice_url": "https://aip.baidubce.com/rest/2.0/ocr/v1/vat_invoice",
+  "note": "百度云「增值税发票识别」凭据（个人实名每月 1000 次免费）。不配置此文件时 OCR 兜底自动关闭，链路仍可只靠文本层运行。切勿随技能包分发。"
+}

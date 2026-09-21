@@ -1,0 +1,10 @@
+{
+  "name": "mail-invoice-pipeline",
+  "private": true,
+  "description": "邮箱发票链路：IMAP 附件/正文链接下载 + SPA 平台浏览器下载 + 百度 OCR 兜底 + 报销汇总表",
+  "dependencies": {
+    "imapflow": "^1.0.0",
+    "js-yaml": "^4.1.0",
+    "puppeteer-core": "^25.6.0"
+  }
+}

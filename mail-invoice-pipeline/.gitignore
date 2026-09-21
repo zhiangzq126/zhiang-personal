@@ -1,0 +1,12 @@
+# 本地凭据与配置（从 *.example 复制生成，切勿提交）
+config.yaml
+ocr-config.json
+scripts/.ocr-token-cache.json
+
+# 依赖与产物
+node_modules/
+__pycache__/
+*.pyc
+*.xlsx
+downloads/
+data/

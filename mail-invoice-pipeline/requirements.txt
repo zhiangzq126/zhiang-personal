@@ -1,0 +1,5 @@
+# Python dependencies for scripts/invoice_summary_build.py and scripts/baidu_ocr.py
+pdfplumber
+openpyxl
+requests
+pypdfium2
